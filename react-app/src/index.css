@@ -1,0 +1,470 @@
+@font-face {
+  font-family: CustomOccidental;
+  src: url(/Quicksand-VariableFont.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: CustomOriental;
+  src: url(/IBMPlexSansJP-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --color-custom1: #282828;
+  --color-custom2: #f8f9f1;
+  --color-custom3: #f9f4f1;
+  --color-custom4: #a75b1f;
+  --color-custom5: #cbcaba;
+  --color-custom6: #697563;
+  --color-custom7: #c8c8b8;
+  --color-custom8: #ede9e4;
+  --color-custom9: #faaa2d;
+  --footer-color-1: "";
+  --lyrics-size-sm: 1.4rem;
+  --lyrics-size-md: 1.6rem;
+  --lyrics-size-lg: 1.8rem;
+  --lightningcss-light: initial;
+  --lightningcss-dark: ;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-custom1: #282828;
+    --color-custom2: #f8f9f1;
+    --color-custom3: #f9f4f1;
+    --color-custom4: #a75b1f;
+    --color-custom5: #cbcaba;
+    --color-custom6: #697563;
+    --color-custom7: #c8c8b8;
+    --color-custom8: #ede9e4;
+    --color-custom9: #faaa2d;
+    --lightningcss-light: ;
+    --lightningcss-dark: initial;
+    color-scheme: dark;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-custom1: #282828;
+    --color-custom2: #f8f9f1;
+    --color-custom3: #f9f4f1;
+    --color-custom4: #a75b1f;
+    --color-custom5: #cbcaba;
+    --color-custom6: #697563;
+    --color-custom7: #c8c8b8;
+    --color-custom8: #ede9e4;
+    --color-custom9: #faaa2d;
+    --lightningcss-light: initial;
+    --lightningcss-dark: ;
+    color-scheme: light;
+  }
+}
+*,
+:before,
+:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: var(--color-custom2);
+  --lightningcss-light: initial;
+  --lightningcss-dark: ;
+  color-scheme: light;
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: auto;
+  font-family: CustomOccidental, serif;
+  font-size: 62.5%;
+  font-style: normal;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+body {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--color-custom2);
+  color: var(--color-custom1);
+}
+button,
+fieldset,
+a {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: 0 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+button,
+a {
+  cursor: pointer;
+}
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+rt {
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  text-align: left;
+}
+img[src=""],
+img:not([src]) {
+  background-image: url(/fallback-avatar.png);
+  background-position: 50%;
+  background-size: cover;
+}
+svg {
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero_bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url("/mount_fuji_4k.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.hero_nav_logo h1 {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  color: #f8f9f1;
+  /* -webkit-text-stroke: 0.01px #282828; */
+  text-shadow: 2px 2px 4px #282828;
+}
+
+.hero_nav_logo h1 span {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  letter-spacing: normal;
+  line-height: 1;
+  color: #f8f9f1;
+}
+
+.hero_nav_links ul {
+  display: flex;
+  gap: 15px;
+}
+
+.hero_nav_links ul li :where(a, button) {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #282828;
+}
+
+.btn_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 7.5px 15px;
+  border: 1px solid #bf9259;
+  outline: none;
+  border-radius: 15px;
+  background: #050505;
+  background: linear-gradient(0, #c38d45 0%, #d29e53 15%, #d6a75d 30%, #ddb068 45%, #ddbb83 60%, #e7ca9a 100%);
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #282828;
+}
+
+.hero_overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 120px;
+}
+
+.hero_overlay_content {
+  display: grid;
+  grid-template-columns: minmax(240px, 240px) 100px;
+  gap: 15px;
+  max-width: 400px;
+  color: #282828;
+}
+
+.grid_el_1 {
+  grid-column: 1 / -1;
+}
+
+.grid_el_3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid_el_3::before {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  display: block;
+  top: 50%;
+  left: -25%;
+  width: 0;
+  height: 100%;
+  border: 1px solid #282828;
+  transform: translateY(-50%);
+}
+
+.hero_overlay_content h2 {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.hero_overlay_content h3 {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.hero_overlay_content p {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.hero_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 15px;
+  padding: 30px;
+}
+
+.hero_slider_ul {
+  display: flex;
+  gap: 15px;
+}
+
+.hero_slide {
+  position: relative;
+  width: 200px;
+  height: 230px;
+  border: 1px solid #e7ca9a;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.hero_slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-position: center;
+  object-fit: cover;
+  -o-object-fit: cover;
+  text-align: center;
+}
+
+.hero_slide_content {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  color: #f8f9f1;
+}
+
+.hero_cta {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 190px;
+}
+
+.hero_cta h4 {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  color: #f8f9f1;
+  /* -webkit-text-stroke: 0.01px #282828; */
+  text-shadow: 2px 2px 4px #282828;
+}
+
+.about_section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  min-height: 400px;
+  padding: 60px 30px;
+  background-color: #f4ead7;
+  background-image:
+    linear-gradient(90deg, rgba(244, 234, 215, 0.99) 0%, rgba(244, 234, 215, 0.98) 43%, rgba(244, 234, 215, 0.72) 60%, rgba(244, 234, 215, 0.02) 100%), url("/kinkakuji_4k.jpg");
+  background-size: cover;
+  background-position: center, right;
+  color: #282828;
+}
+
+.about_section_left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+}
+
+.about_section_left h2 {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.about_section_left h3 {
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  max-width: 160px;
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.about_section_left h3::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  top: 50%;
+  right: -160px;
+  display: block;
+  width: 100%;
+  border: 1px solid #a58a61;
+  transform: translate(0%, -50%);
+}
+
+.about_section_left p {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+}
+
+.about_features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.about_features li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.about_features li svg {
+  min-width: 32px;
+  width: 32px;
+  max-width: 32px;
+  height: 32px;
+}
+
+.about_features li svg path {
+  fill: #a58a61;
+}
+
+.about_section_right {
+  align-self: flex-start;
+}
+
+.about_section_right blockquote {
+  position: relative;
+  font-family: "CustomOccidental";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2.2rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+}
+
+.about_section_right blockquote::before {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  bottom: -50%;
+  left: 20px;
+  width: 25%;
+  height: 0;
+  border: 1px solid #a58a61;
+}
