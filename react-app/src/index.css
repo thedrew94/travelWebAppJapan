@@ -468,3 +468,252 @@ svg {
   height: 0;
   border: 1px solid #a58a61;
 }
+
+.travel_destinations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  min-height: 500px;
+  height: 500px;
+  max-height: 500px;
+  background-color: #f4ead7;
+  background-image: linear-gradient(90deg, #072839 0%, #122a34 43%, #0b232b 60%, #041c28 100%);
+  color: #f8f9f1;
+}
+
+.travel_destinations_left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+  padding: 60px 0px 60px 30px;
+}
+
+.travel_destinations_left h2 {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.travel_destinations_left h3 {
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  max-width: 160px;
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.travel_destinations_left h3::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  top: 50%;
+  right: -160px;
+  display: block;
+  width: 100%;
+  border: 1px solid #a58a61;
+  transform: translate(0%, -50%);
+}
+
+.travel_destinations_left p {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+}
+
+.travel_destinations_left button {
+  max-width: 300px;
+}
+
+.travel_destinations_right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 60px 0;
+}
+
+.travel_destinations_list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  gap: 15px;
+  padding-left: 15px;
+  overflow-y: auto;
+}
+
+.travel_destinations_list::before {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  top: 50%;
+  left: 15px;
+  width: 0;
+  height: 80%;
+  border-left: 1px solid #a58a61;
+  transform: translateY(-50%);
+}
+
+.travel_destinations_item {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  min-height: 130px;
+  padding: 15px 30px;
+  flex-shrink: 0;
+}
+
+.travel_destinations_marker {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #a58a61;
+  border-radius: 50%;
+  background-color: #f4ead7;
+  transform: translate(-50%, 15px);
+}
+
+.travel_destinations_item::before {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  border: 1px solid #a58a61;
+}
+
+.travel_destinations_item h4 {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+
+.travel_destinations_item p {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.travel_destinations_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 130px;
+  border: 1px solid #a58a61;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.travel_destinations_image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-position: center;
+  object-fit: cover;
+  -o-object-fit: cover;
+  text-align: center;
+}
+
+.travel_services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  padding: 60px 30px;
+  background-color: #f4ead7;
+  background-image: linear-gradient(90deg, rgba(244, 234, 215, 0.99) 0%, rgba(244, 234, 215, 0.98) 43%, rgba(244, 234, 215, 0.72) 60%, rgba(244, 234, 215, 0.02) 100%);
+  color: #282828;
+}
+
+.travel_services_left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+}
+
+.travel_services_left h2 {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.travel_services_left h3 {
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  max-width: 160px;
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.travel_services_left h3::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  top: 50%;
+  right: -160px;
+  display: block;
+  width: 100%;
+  border: 1px solid #a58a61;
+  transform: translate(0%, -50%);
+}
+
+.travel_services_left button {
+  max-width: 300px;
+}
+
+.travel_services_right p {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+}
+
+.travel_services_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  grid-column: 1 / -1;
+}

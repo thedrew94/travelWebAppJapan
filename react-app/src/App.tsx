@@ -173,7 +173,96 @@ export default function App() {
         </div>
       </div>
 
-      <section className="travel_destinations"></section>
+      <section className="travel_destinations">
+        <div className="travel_destinations_left">
+          <h3>THE JOURNEY</h3>
+          <h2>
+            TAILORED TOURS <br />
+            INCREDIBLE DESTINATIONS
+          </h2>
+          <p>
+            From bustling cities to serene landscapes, our tailored tours offer authentic experiences that showcase the best of Japan. Whether you're seeking cultural immersion,
+            culinary delights, or breathtaking scenery, our tours are crafted to create unforgettable memories.
+          </p>
+
+          <button className="btn_main">
+            View Detailed Itinerary
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path d="M18,12h0a2,2,0,0,0-.59-1.4l-4.29-4.3a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42L15,11H5a1,1,0,0,0,0,2H15l-3.29,3.29a1,1,0,0,0,1.41,1.42l4.29-4.3A2,2,0,0,0,18,12Z" />
+            </svg>
+          </button>
+        </div>
+        <div className="travel_destinations_right">
+          <ul className="travel_destinations_list">
+            <li className="travel_destinations_item">
+              <span className="travel_destinations_marker"></span>
+              <div>
+                <h4>Destination Name</h4>
+                <p>Brief description of the destination.</p>
+              </div>
+              <div className="travel_destinations_image">
+                <img src="/japan_kyoto_2k.jpg" alt="Travel Destination" />
+              </div>
+            </li>
+
+            <li className="travel_destinations_item">
+              <span className="travel_destinations_marker"></span>
+              <div>
+                <h4>Destination Name</h4>
+                <p>Brief description of the destination.</p>
+              </div>
+              <div className="travel_destinations_image">
+                <img src="/japan_tokyo_2k.jpg" alt="Travel Destination" />
+              </div>
+            </li>
+
+            <li className="travel_destinations_item">
+              <span className="travel_destinations_marker"></span>
+              <div>
+                <h4>Destination Name</h4>
+                <p>Brief description of the destination.</p>
+              </div>
+              <div className="travel_destinations_image">
+                <img src="/japan_kyoto_2k.jpg" alt="Travel Destination" />
+              </div>
+            </li>
+
+            <li className="travel_destinations_item">
+              <span className="travel_destinations_marker"></span>
+              <div>
+                <h4>Destination Name</h4>
+                <p>Brief description of the destination.</p>
+              </div>
+              <div className="travel_destinations_image">
+                <img src="/japan_tokyo_2k.jpg" alt="Travel Destination" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="travel_services">
+        <div className="travel_services_left">
+          <h3>TRAVEL SERVICES</h3>
+          <h2>PRIVATE GUIDE</h2>
+        </div>
+
+        <div className="travel_services_right">
+          <p>
+            Enjoy a personalized journey with a private guide who accompanies you around the city, sharing local insights and cultural highlights. From tailored itinerary and
+            transportation planning to restaurant recommendations, museum visits, and authentic local experiences, every detail is designed to make your trip seamless and
+            memorable.
+          </p>
+        </div>
+
+        <ul className="travel_services_list">
+          <li>Personalized city tours with a private guide</li>
+          <li>Tailored itinerary and transportation planning</li>
+          <li>Restaurant recommendations and reservations</li>
+          <li>Museum visits and cultural experiences</li>
+          <li>Authentic local experiences</li>
+        </ul>
+      </section>
     </>
   );
 }
