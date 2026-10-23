@@ -364,7 +364,15 @@ export default function App() {
               Ready to <br />
               Explore Japan?
             </h2>
-            <p>Tell us a little about your travel plans and we will get back to you with a personalized itinerary.</p>
+            <p>
+              Tell us about your travel plans, and we’ll create a personalized itinerary tailored to your interests, needs, and budget. Our enquiry form is completely free, with no
+              obligation.
+              <br />
+              <br />
+              We offer fully customized itineraries covering routes, destinations, transportation, accommodation, and restaurant recommendations. <br />
+              Choose between a fully guided experience, with a personal guide accompanying you from morning to evening to explore the city, museums, shops, and hidden gems, or a
+              self-guided itinerary that lets you discover everything at your own pace with a detailed plan prepared just for you.
+            </p>
           </div>
 
           <div className="inquiry_form_wrapper">
@@ -421,7 +429,7 @@ export default function App() {
 
                 <div className="form-group">
                   <label htmlFor="plans">Tell Us About Your Travel Plans</label>
-                  <textarea id="plans" name="plans" rows={5} placeholder="Destinations, interests, activities, special requests..." maxLength={2000}></textarea>
+                  <textarea id="plans" name="plans" rows={5} maxLength={2000} draggable="false" placeholder="Destinations, interests, activities, special requests..."></textarea>
                 </div>
               </fieldset>
 
@@ -436,9 +444,35 @@ export default function App() {
         </div>
       </section>
 
-      {/* <footer>
-        <small>&copy; 2024 Travel Web App Japan. All rights reserved.</small>
-      </footer> */}
+      <footer className="footer">
+        <div className="footer_inner">
+          <div className="hero_nav_logo">
+            <h1>
+              JAPAN ESCAPES <br />
+              <span>JOURNEYS BEYOND ORDINARY</span>
+            </h1>
+          </div>
+
+          <div className="footer_links">
+            <ul>
+              <li>
+                <a href="/">About</a>
+              </li>
+              <li>
+                <a href="/">Itinerary</a>
+              </li>
+              <li>
+                <a href="/">Included</a>
+              </li>
+              <li>
+                <a href="/">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <small>&copy; 2024 Travel Web App Japan. All rights reserved.</small>
+        </div>
+      </footer>
     </>
   );
 }

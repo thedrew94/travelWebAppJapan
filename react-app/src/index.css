@@ -774,8 +774,7 @@ svg {
   width: 100%;
   height: 100%;
   background-image: url("/tokyo_night_2k.jpg");
-
-  background-image: linear-gradient(90deg, rgba(56, 56, 54, 0.99) 0%, rgba(102, 96, 84, 0.5) 30%, rgba(244, 234, 215, 0.02) 100%), url("/tokyo_night_2k.jpg");
+  background-image: linear-gradient(90deg, rgb(40, 40, 40, 0.95) 0%, rgb(40, 40, 40, 0.95) 25%, rgba(244, 234, 215, 0.02) 100%), url("/tokyo_night_2k.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -892,6 +891,9 @@ svg {
 .inquiry_form input,
 .inquiry_form select,
 .inquiry_form textarea {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   border: 1px solid #f8f9f1;
   border-radius: 6px;
   padding: 15px;
@@ -901,8 +903,50 @@ svg {
   font-size: 1.4rem;
   letter-spacing: 0.1em;
   line-height: 1.1;
+  resize: none;
 }
 
 .inquiry_form button {
   max-width: 300px;
+}
+
+.footer {
+  border-top: 2px solid #f4ead7;
+  background: #091217;
+  background: radial-gradient(circle, #091217 0%, #050f15 100%);
+}
+
+.footer_inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  color: #f8f9f1;
+}
+
+.footer_links ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.footer_links ul li :where(a, button) {
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.footer_inner small {
+  grid-column: 1 / -1;
+  padding: 15px;
+  font-family: "CustomOccidental";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 1;
+  text-align: center;
 }
